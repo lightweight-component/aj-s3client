@@ -6,7 +6,17 @@
 
 # A Lightweight S3 Client / S3 存储 Java 客户端
 
-[教程](https://blog.csdn.net/zhangxin09/article/details/137671230)。
+Tutorial: https://blog.csdn.net/zhangxin09/article/details/137671230.
+
+Java Documents: https://dev.ajaxjs.com/docs/javadoc/aj-s3client/.
+
+Support these S3 Storages directly:
+
+- Cloudflare R2
+- Scaleway
+- Backblaze
+- Aliyun OSS
+- Netease OSS
 
 ## Install 
 ```xml
