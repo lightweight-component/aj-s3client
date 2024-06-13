@@ -1,7 +1,14 @@
-# S3 存储 Java 客户端
+[![Maven Central](https://img.shields.io/maven-central/v/com.ajaxjs/aj-s3client?label=Latest%20Release)](https://central.sonatype.com/artifact/com.ajaxjs/aj-s3client)
+[![License](https://img.shields.io/badge/license-Apache--2.0-green.svg?longCache=true&style=flat)](http://www.apache.org/licenses/LICENSE-2.0.txt)
+[![Email](https://img.shields.io/badge/Contact--me-Email-orange.svg)](mailto:frank@ajaxjs.com)
+[![QQ群](https://framework.ajaxjs.com/static/qq.svg)](https://shang.qq.com/wpa/qunwpa?idkey=3877893a4ed3a5f0be01e809e7ac120e346102bd550deb6692239bb42de38e22)
 
-安装
 
+# A Lightweight S3 Client / S3 存储 Java 客户端
+
+[教程](https://blog.csdn.net/zhangxin09/article/details/137671230)。
+
+## Install 
 ```xml
 <dependency>
     <groupId>com.ajaxjs</groupId>
@@ -10,9 +17,8 @@
 </dependency>
 ```
 
-详见[教程](https://blog.csdn.net/zhangxin09/article/details/137671230)。
 
-单元测试的配置文件application.yml没有随着 VCS 提交，其内容如下：
+单元测试的配置文件`application.yml`没有随着 VCS 提交，其内容如下：
 
 ```yaml
 S3Storage:
