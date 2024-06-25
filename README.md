@@ -1,4 +1,5 @@
 [![Maven Central](https://img.shields.io/maven-central/v/com.ajaxjs/aj-s3client?label=Latest%20Release)](https://central.sonatype.com/artifact/com.ajaxjs/aj-s3client)
+[![Javadoc](https://img.shields.io/badge/javadoc-1.1-brightgreen.svg?)](https://dev.ajaxjs.com/docs/javadoc/aj-s3client/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg?longCache=true&style=flat)](http://www.apache.org/licenses/LICENSE-2.0.txt)
 [![Email](https://img.shields.io/badge/Contact--me-Email-orange.svg)](mailto:frank@ajaxjs.com)
 [![QQ群](https://framework.ajaxjs.com/static/qq.svg)](https://shang.qq.com/wpa/qunwpa?idkey=3877893a4ed3a5f0be01e809e7ac120e346102bd550deb6692239bb42de38e22)
@@ -23,7 +24,7 @@ Support these S3 Storages directly:
 <dependency>
     <groupId>com.ajaxjs</groupId>
     <artifactId>aj-s3client</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 </dependency>
 ```
 
