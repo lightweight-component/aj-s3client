@@ -22,7 +22,14 @@ Support these S3 Storages directly:
 - Aliyun OSS
 - Netease OSS
 
-Tutorial: https://blog.csdn.net/zhangxin09/article/details/137671230.
+
+Tutorial(For Chinese): https://blog.csdn.net/zhangxin09/article/details/137671230.
+
+
+## Source code
+
+[Github](https://github.com/lightweight-component/aj-s3client) | [Gitcode](https://gitcode.com/lightweight-component/aj-s3client)
+
 
 ## Install
 
