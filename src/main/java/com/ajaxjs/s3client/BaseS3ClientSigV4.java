@@ -3,8 +3,8 @@ package com.ajaxjs.s3client;
 import com.ajaxjs.s3client.signer_v4.AwsCredentials;
 import com.ajaxjs.s3client.signer_v4.CanonicalRequest;
 import com.ajaxjs.s3client.signer_v4.SignBuilder;
+import com.ajaxjs.s3client.util.S3Utils;
 import com.ajaxjs.util.MessageDigestHelper;
-import org.springframework.util.ObjectUtils;
 
 import java.net.HttpURLConnection;
 import java.net.URI;
@@ -42,7 +42,7 @@ public abstract class BaseS3ClientSigV4 extends BaseS3Client {
             builder.header("host", host);
         }
 
-        if (!ObjectUtils.isEmpty(extraRequestHeaders)) {
+        if (!S3Utils.isEmpty(extraRequestHeaders)) {
             for (String key : extraRequestHeaders.keySet())
                 builder.header(key, extraRequestHeaders.get(key));
         }
@@ -81,7 +81,7 @@ public abstract class BaseS3ClientSigV4 extends BaseS3Client {
                 conn.setRequestProperty("host", host);
             }
 
-            if (!ObjectUtils.isEmpty(extraRequestHeaders)) {
+            if (!S3Utils.isEmpty(extraRequestHeaders)) {
                 for (String key : extraRequestHeaders.keySet())
                     conn.setRequestProperty(key, extraRequestHeaders.get(key));
             }

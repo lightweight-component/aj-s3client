@@ -2,8 +2,6 @@
 [![Javadoc](https://img.shields.io/badge/javadoc-1.1-brightgreen.svg?)](https://dev.ajaxjs.com/docs/javadoc/aj-s3client/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg?longCache=true&style=flat)](http://www.apache.org/licenses/LICENSE-2.0.txt)
 [![Email](https://img.shields.io/badge/Contact--me-Email-orange.svg)](mailto:frank@ajaxjs.com)
-[![QQ群](https://framework.ajaxjs.com/static/qq.svg)](https://shang.qq.com/wpa/qunwpa?idkey=3877893a4ed3a5f0be01e809e7ac120e346102bd550deb6692239bb42de38e22)
-
 
 # A Lightweight S3 Client / S3 存储 Java 客户端
 
@@ -19,8 +17,10 @@ Support these S3 Storages directly:
 - Aliyun OSS
 - Netease OSS
 
-## Install 
+## Install
+
 ```xml
+
 <dependency>
     <groupId>com.ajaxjs</groupId>
     <artifactId>aj-s3client</artifactId>
@@ -28,8 +28,7 @@ Support these S3 Storages directly:
 </dependency>
 ```
 
-
-单元测试的配置文件`application.yml`没有随着 VCS 提交，其内容如下：
+The configuration file `application.yml` for unit tests was not committed with the VCS. Its content is as follows:
 
 ```yaml
 S3Storage:
