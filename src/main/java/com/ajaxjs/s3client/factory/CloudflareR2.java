@@ -1,8 +1,13 @@
 package com.ajaxjs.s3client.factory;
 
-import com.ajaxjs.net.http.*;
+
 import com.ajaxjs.s3client.BaseS3ClientSigV4;
 import com.ajaxjs.s3client.util.S3SigV4Utils;
+import com.ajaxjs.util.http_request.Delete;
+import com.ajaxjs.util.http_request.Get;
+import com.ajaxjs.util.http_request.Post;
+import com.ajaxjs.util.http_request.model.HttpConstants;
+import com.ajaxjs.util.http_request.model.ResponseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

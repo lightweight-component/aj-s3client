@@ -1,4 +1,4 @@
-package com.ajaxjs.s3client.model;
+package com.ajaxjs.s3client;
 
 import lombok.Data;
 

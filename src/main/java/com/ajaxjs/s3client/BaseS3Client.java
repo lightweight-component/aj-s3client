@@ -1,7 +1,7 @@
 package com.ajaxjs.s3client;
 
-import com.ajaxjs.net.http.ResponseEntity;
-import com.ajaxjs.s3client.model.Config;
+
+import com.ajaxjs.util.http_request.model.ResponseEntity;
 import lombok.Data;
 
 @Data

@@ -1,10 +1,11 @@
 package com.ajaxjs.s3client;
 
-import com.ajaxjs.net.http.Delete;
-import com.ajaxjs.net.http.Get;
-import com.ajaxjs.net.http.Post;
-import com.ajaxjs.net.http.ResponseEntity;
-import com.ajaxjs.util.DateUtil;
+
+import com.ajaxjs.util.DateHelper;
+import com.ajaxjs.util.http_request.Delete;
+import com.ajaxjs.util.http_request.Get;
+import com.ajaxjs.util.http_request.Post;
+import com.ajaxjs.util.http_request.model.ResponseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -26,7 +27,7 @@ public abstract class BaseS3ClientSigV2 extends BaseS3Client {
 
     @Override
     public boolean createBucket(String bucketName) {
-        String now = DateUtil.getGMTDate();
+        String now = DateHelper.getGMTDate();
         String data = "PUT\n" + getCanonicalResource(now, bucketName, "");
         String url = getFullEndPoint(bucketName);
 
@@ -35,7 +36,7 @@ public abstract class BaseS3ClientSigV2 extends BaseS3Client {
 
     @Override
     public boolean deleteBucket(String bucketName) {
-        String now = DateUtil.getGMTDate();
+        String now = DateHelper.getGMTDate();
         String data = "DELETE\n" + getCanonicalResource(now, bucketName, "");
         String url = getFullEndPoint(bucketName);
 
@@ -44,7 +45,7 @@ public abstract class BaseS3ClientSigV2 extends BaseS3Client {
 
     @Override
     public String listBucket() {
-        String now = DateUtil.getGMTDate();
+        String now = DateHelper.getGMTDate();
         String canonicalHeaders = "", canonicalResource = "/";
         String data = "GET\n\n\n" + now + "\n" + canonicalHeaders + canonicalResource;
         String url = getEndPoint();
@@ -54,7 +55,7 @@ public abstract class BaseS3ClientSigV2 extends BaseS3Client {
 
     @Override
     public Map<String, String> listBucketXml() {
-        String now = DateUtil.getGMTDate();
+        String now = DateHelper.getGMTDate();
         String canonicalHeaders = "", canonicalResource = "/";
         String data = "GET\n\n\n" + now + "\n" + canonicalHeaders + canonicalResource;
         String url = getEndPoint();
@@ -64,7 +65,7 @@ public abstract class BaseS3ClientSigV2 extends BaseS3Client {
 
     @Override
     public boolean getObject(String bucketName, String objectName) {
-        String now = DateUtil.getGMTDate();
+        String now = DateHelper.getGMTDate();
         String data = "GET\n" + getCanonicalResource(now, bucketName, objectName);
         String url = getFullEndPoint(bucketName) + "/" + objectName;
 
@@ -75,7 +76,7 @@ public abstract class BaseS3ClientSigV2 extends BaseS3Client {
 
     @Override
     public boolean deleteObject(String bucketName, String objectName) {
-        String now = DateUtil.getGMTDate();// 获取当前时间，用于请求头
+        String now = DateHelper.getGMTDate();// 获取当前时间，用于请求头
         String data = "DELETE\n" + getCanonicalResource(now, bucketName, objectName);
         String url = getFullEndPoint(bucketName) + "/" + objectName;
 

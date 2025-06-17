@@ -1,13 +1,13 @@
 package com.ajaxjs.s3client;
 
-import com.ajaxjs.net.http.Post;
-import com.ajaxjs.net.http.ResponseEntity;
+
 import com.ajaxjs.s3client.factory.AliyunOSS;
 import com.ajaxjs.s3client.factory.NeteaseOSS;
-import com.ajaxjs.s3client.model.Config;
 import com.ajaxjs.util.MessageDigestHelper;
+import com.ajaxjs.util.http_request.Post;
+import com.ajaxjs.util.http_request.model.ResponseEntity;
 import com.ajaxjs.util.io.FileHelper;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.util.Map;
@@ -40,7 +40,7 @@ public class TestFactory {
 
 
     File file = new File(("D:\\code\\aj\\aj-business\\aj-base\\src\\test\\resources\\img.png"));
-    byte[] content = FileHelper.openAsByte(file);
+    byte[] content = FileHelper.readFileBytes(file.getPath());
 
     @Test
     public void testNso() {
@@ -72,7 +72,7 @@ public class TestFactory {
         String method = "PUT";
 
         File file = new File(("D:\\code\\aj\\aj-business\\aj-base\\src\\test\\resources\\img.png"));
-        byte[] content = FileHelper.openAsByte(file);
+        byte[] content = FileHelper.readFileBytes(file.getPath());
         String contentMD5 = MessageDigestHelper.calcFileMD5(file, null);
 
         String contentType = "application/octet-stream";

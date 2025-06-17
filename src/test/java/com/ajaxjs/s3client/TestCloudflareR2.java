@@ -1,15 +1,13 @@
 package com.ajaxjs.s3client;
 
 import com.ajaxjs.s3client.factory.CloudflareR2;
-import com.ajaxjs.s3client.model.Config;
 import com.ajaxjs.util.io.FileHelper;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.util.Map;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestCloudflareR2 {
     CloudflareR2 client = new CloudflareR2();
@@ -42,8 +40,7 @@ public class TestCloudflareR2 {
 
     @Test
     public void testPutObject() {
-        File file = new File(("D:\\code\\aj\\aj-business\\aj-base\\src\\test\\resources\\img.png"));
-        byte[] content = FileHelper.openAsByte(file);
+        byte[] content = FileHelper.readFileBytes("D:\\code\\aj\\aj-business\\aj-base\\src\\test\\resources\\img.png");
 
         assertTrue(client.putObject("ajaxjs", "s22.png", content));
     }
